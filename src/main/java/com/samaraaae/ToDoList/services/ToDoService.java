@@ -16,7 +16,7 @@ public class ToDoService {
     private ToDoRepository toDoRepository;
 
     @Transactional(readOnly = true)
-    public List<ToDoDTO> findAll(){
+    public List<ToDoDTO> allTask(){
         List<ToDo> result = toDoRepository.findAll();
         List <ToDoDTO> dto = result.stream().map(x -> new ToDoDTO(x)).toList();
 
