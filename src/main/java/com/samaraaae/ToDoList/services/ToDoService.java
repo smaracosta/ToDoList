@@ -23,5 +23,7 @@ public class ToDoService {
         return dto;
     }
 
-
+    public ToDo addTask(ToDo toDo) {
+        return toDoRepository.save(toDo);
+    }
 }
