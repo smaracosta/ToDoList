@@ -26,4 +26,14 @@ public class ToDoController {
         return toDoService.addTask(toDo);
     }
 
+    @PutMapping
+    public ToDo updateTask(@RequestBody ToDo toDo){
+        return toDoService.addTask(toDo);
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public void delete(@PathVariable Long id){
+        toDoService.delete(id);
+    }
+
 }

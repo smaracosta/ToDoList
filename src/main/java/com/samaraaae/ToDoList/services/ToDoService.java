@@ -6,6 +6,8 @@ import com.samaraaae.ToDoList.repositories.ToDoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -26,4 +28,10 @@ public class ToDoService {
     public ToDo addTask(ToDo toDo) {
         return toDoRepository.save(toDo);
     }
+
+    public void delete(Long id) {
+        toDoRepository.deleteById(id);
+    }
+
+
 }
